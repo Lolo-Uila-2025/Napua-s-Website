@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Learning Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background: #007bff;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section {
+      background: white;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      cursor: pointer;
+      margin: 0;
+      color: #007bff;
+      position: relative;
+    }
+    .section h2::after {
+      content: '▼';
+      position: absolute;
+      right: 0;
+      transition: transform 0.3s;
+    }
+    .section.active h2::after {
+      transform: rotate(180deg);
+    }
+    .section p {
+      display: none;
+      margin-top: 10px;
+    }
+    .section.active p {
+      display: block;
+    }
+
+    .image-section {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .image-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .image-section p {
+      margin-top: 10px;
+      color: #555;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      background: #e0e0e0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Learning Portfolio</h1>
+    <p>Welcome to my showcase of what I’ve learned!</p>
+  </header>
+
+  <main>
+    <div class="section">
+      <h2>1. Arduino</h2>
+      <p>I learned how to wire and code my arduino to make games like an ish game we made for fun. We also learned about howanalog and digital output is. The arduino is also very portable so i can bring it everywhere</p>
+    </div>
+    <div class="section">
+      <h2>2. How to teach an AI</h2>
+      <p>We used voice samples of many different rappers and singers to teach the machine how tell the differents between different voices. The machine was taking in all the knowledge and kinda little bit not accurrate. The machine thought i was juice wrld</p>
+    </div>
+    <div class="section">
+      <h2>3. Pupule Olympics</h2>
+      <p>This was a residential activity and it was fun because when I was playing it made me feel happy and connect to my peers, like the hukihuki game where I carried my team against another team. And we did a baloon toss and me and Elias was having fun while we were playing. Then we played a rope game that was like the junk and a po game and it was a tie.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. Movie Night</h2>
+      <p>We watched the Minecraft movie and we were all laughing and having a good time. This was also a residential activity. When we were watching this movie we were all involved in the movie. While we were there, there were two sides to watch the movie: the chill side, which nobody was on, and the not-chill side, which everyone was on.</p>
+    </div>
+
+    <div class="image-section">
+      <img src="the one pic i smiled in.jpg" alt="My Experience" />
+      <p>Thank you!</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 My Learning Journey
+  </footer>
+
+  <script>
+    document.querySelectorAll('.section h2').forEach(header => {
+      header.addEventListener('click', () => {
+        const section = header.parentElement;
+        section.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
